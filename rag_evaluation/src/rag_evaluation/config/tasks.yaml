@@ -1,0 +1,14 @@
+state_machine_task:
+  description: >
+    The main task is to provide a single network packet (a client request), 
+    containing all the necessary fields and headers, that follows the {protocol} protocol state machine,
+    transitioning the server's state. The state_machine_specialist agent 
+    would search the pdf of the RFC document, for necessary information to assist in the completion of the task.
+    The Question: {question}.
+
+  expected_output: >
+    A single network packet (client request) for the protocol: {protocol}, 
+    containing all the necessary fields, and headers, 
+    transitioning the server's state. No more, no less.
+
+  agent: state_machine_specialist

@@ -1,0 +1,20 @@
+[project]
+name = "rag_evaluation"
+version = "0.1.0"
+description = "rag_evaluation using crewAI"
+authors = [{ name = "Youssef Makled", email = "youssefmfmakled@gmail.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.86.0,<1.0.0"
+]
+
+[project.scripts]
+rag_evaluation = "rag_evaluation.main:run"
+run_crew = "rag_evaluation.main:run"
+train = "rag_evaluation.main:train"
+replay = "rag_evaluation.main:replay"
+test = "rag_evaluation.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
